@@ -2,8 +2,15 @@ import React, { Component } from "react";
 
 export class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl, author, date, source } =
-      this.props;
+    let {
+      title,
+      description,
+      imageUrl,
+      newsUrl,
+      author,
+      date,
+      source,
+    } = this.props;
     return (
       <div className="my-3">
         <div className="card">
@@ -16,7 +23,7 @@ export class NewsItem extends Component {
             }}
           >
             <span
-              class=" badge badge-dark bg-dark "
+              className=" badge badge-dark bg-dark "
               // style={{ left: "90%", zIndex: "1" }}
             >
               {source}
@@ -35,8 +42,8 @@ export class NewsItem extends Component {
             </p>
             <a
               href={newsUrl}
-              rel="noreferrer"
               target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-sm btn-dark"
             >
               Read More
