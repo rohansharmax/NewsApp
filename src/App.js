@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 export default class App extends Component {
   pageSize = 15;
@@ -20,11 +20,11 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <BrowserRouter basename="newsapp">
           <NavBar />
           <LoadingBar color="#f11946" progress={this.state.progress} />
           {/* <Switch> */}
-          <Route exact path="/">
+          <Route path="/">
             <News
               setProgress={this.setProgress}
               apiKey={this.apiKey}
@@ -34,17 +34,8 @@ export default class App extends Component {
               category="general"
             />
           </Route>
-          <Route exact path="/ ">
-            <News
-              setProgress={this.setProgress}
-              apiKey={this.apiKey}
-              key="general"
-              pageSize={this.pageSize}
-              country="in"
-              category="general"
-            />
-          </Route>
-          <Route exact path="/business">
+
+          <Route path="/business">
             <News
               setProgress={this.setProgress}
               apiKey={this.apiKey}
@@ -54,7 +45,7 @@ export default class App extends Component {
               category="business"
             />
           </Route>
-          <Route exact path="/entertainment">
+          <Route path="/entertainment">
             <News
               setProgress={this.setProgress}
               apiKey={this.apiKey}
@@ -64,7 +55,7 @@ export default class App extends Component {
               category="entertainment"
             />
           </Route>
-          <Route exact path="/health">
+          <Route path="/health">
             <News
               setProgress={this.setProgress}
               apiKey={this.apiKey}
@@ -74,7 +65,7 @@ export default class App extends Component {
               category="health"
             />
           </Route>
-          <Route exact path="/science">
+          <Route path="/science">
             <News
               setProgress={this.setProgress}
               apiKey={this.apiKey}
@@ -84,7 +75,7 @@ export default class App extends Component {
               category="science"
             />
           </Route>
-          <Route exact path="/sports">
+          <Route path="/sports">
             <News
               setProgress={this.setProgress}
               apiKey={this.apiKey}
@@ -94,7 +85,7 @@ export default class App extends Component {
               category="sports"
             />
           </Route>
-          <Route exact path="/technology">
+          <Route path="/technology">
             <News
               setProgress={this.setProgress}
               apiKey={this.apiKey}
@@ -105,7 +96,7 @@ export default class App extends Component {
             />
           </Route>
           {/* </Switch> */}
-        </Router>
+        </BrowserRouter>
       </div>
     );
   }
