@@ -1,3 +1,32 @@
+
+# TEXTIFY WEB APP
+
+• Developed a NewsApp that displays latest news by fetching an open-source API
+• Single page application that interacts with API.
+• Included a Prefernce-based feature to enable sorting of news by the user
+
+This is a one stop for users to read all the latesr news in just one click and it even has a feature to customize the type of news they want to read.
+This is a very handy tool for students and working professionals to stay updated about the news.
+
+
+
+## Contributing
+
+Contributions are always welcome!
+
+See https://github.com/rohansharmax/newsapp for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
+
+## Tech Stack
+
+React JS ,Bootstrap ,HTML ,CSS ,JavaScript ,Git 
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
