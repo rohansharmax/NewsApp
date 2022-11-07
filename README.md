@@ -1,8 +1,10 @@
 
-# TEXTIFY WEB APP
+# LIVE NEWS WEB APPLICATION
 
 • Developed a NewsApp that displays latest news by fetching an open-source API
+
 • Single page application that interacts with API.
+
 • Included a Prefernce-based feature to enable sorting of news by the user
 
 This is a one stop for users to read all the latesr news in just one click and it even has a feature to customize the type of news they want to read.
